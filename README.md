@@ -199,4 +199,3 @@ export default ruTranslations;
 **Note:** Sometimes you will see this `{{  count  }}` syntax in between the text. This is a placeholder for a variable and it must **never** be edited. Also, sometimes, you will have keys that are accompanied by a `_one` or `_other` suffix. This is a syntax for when the translation should be singular or plural.
 
 6. Once completed, make sure to read your work and verify for typos or context. Once you are confident, create a pull request to the official codebase and wait for review.
-.
