@@ -19,12 +19,10 @@ interface BoardingPassProps {
   origin: {
     name: string;
     iata: string;
-    icao: string;
   };
   destination: {
     name: string;
     iata: string;
-    icao: string;
   };
   callsign: string;
   slotDate: string;
@@ -121,7 +119,7 @@ const BoardingPassLeftSide: FunctionComponent<BoardingPassProps> = ({
       <div className={bodyStyle.flightInfo}>
         <div className="flex flex-col">
           <div className="font-action font-semibold">
-            {origin.name}/{origin.iata}/{origin.icao}
+            {origin.name}/{origin.iata}
           </div>
           <div className="font-header mt-auto">
             <div className="font-light text-[0.56rem] leading-3">Date</div>
@@ -149,7 +147,7 @@ const BoardingPassLeftSide: FunctionComponent<BoardingPassProps> = ({
         </div>
         <div className="flex flex-col">
           <div className="font-action font-semibold">
-            {destination.name}/{destination.iata}/{destination.icao}
+            {destination.name}/{destination.iata}
           </div>
           <div className={bodyStyle.qrCodeInfo}>
             <div className={bodyStyle.infoText}>
