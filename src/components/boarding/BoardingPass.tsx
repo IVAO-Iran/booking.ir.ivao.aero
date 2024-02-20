@@ -71,7 +71,7 @@ const BoardingPassHeader: FunctionComponent<BoardingPassProps> = ({
       className={headerStyle.header}
     >
       <div>
-        <span>Cartão de Embarque</span>
+        <span>{eventName}</span>
         <span>Boarding Pass</span>
       </div>
       <div>
@@ -96,14 +96,14 @@ const BoardingPassLeftSide: FunctionComponent<BoardingPassProps> = ({
     <div>
       <div className={bodyStyle.passengerInfo}>
         <span>
-          <span>Nome/Name</span>
+          <span>Name</span>
           <span>
             {user.lastName}, {user.firstName}
           </span>
         </span>
 
         <span>
-          <span>Localizador</span>
+          <span>Your VID</span>
           <span>{user.vid}</span>
         </span>
       </div>
@@ -112,21 +112,21 @@ const BoardingPassLeftSide: FunctionComponent<BoardingPassProps> = ({
         style={{ backgroundColor: themeColor, color: themeColor }}
         className={bodyStyle.flightHeader}
       >
-        <span>de/from</span>
-        <span>voo/flight</span>
-        <span>destino/arrival</span>
+        <span>Departure</span>
+        <span>Callsign</span>
+        <span>Destination</span>
       </div>
       <div className={bodyStyle.flightInfo}>
         <div className="flex flex-col">
           <div className="font-action font-semibold">
-            {origin.name}/{origin.iata}
+            {origin.name}/{origin.iata}/{origin.icao}
           </div>
           <div className="font-header mt-auto">
-            <div className="font-light text-[0.56rem] leading-3">Data/Date</div>
+            <div className="font-light text-[0.56rem] leading-3">Date</div>
             <div className="text-sm">{formatDate(eventStartDate)}</div>
           </div>
           <div className="font-header mt-auto">
-            <div className="font-light text-[0.56rem] leading-3">posição/stand</div>
+            <div className="font-light text-[0.56rem] leading-3">Stand</div>
             <div className="text-[2rem] leading-[2.6rem] font-extrabold">{gate}</div>
           </div>
         </div>
@@ -135,7 +135,7 @@ const BoardingPassLeftSide: FunctionComponent<BoardingPassProps> = ({
             {callsign}
           </div>
           <div className="font-header mt-auto">
-            <div className="font-light text-[0.56rem] leading-3">Grupo/Group</div>
+            <div className="font-light text-[0.56rem] leading-3">Group</div>
             <div className="text-sm">G1</div>
           </div>
           <div className="font-header mt-auto">
@@ -147,15 +147,14 @@ const BoardingPassLeftSide: FunctionComponent<BoardingPassProps> = ({
         </div>
         <div className="flex flex-col">
           <div className="font-action font-semibold">
-            {destination.name}/{destination.iata}
+            {destination.name}/{destination.iata}/{destination.icao}
           </div>
           <div className={bodyStyle.qrCodeInfo}>
             <div className={bodyStyle.infoText}>
-              Para participar do evento você deve estar ciente e disposto a
-              cumprir todas as orientações disponíveis no briefing de piloto
+              To participate in the event you must be aware of and willing to comply with all guidelines available in the pilot briefing.
             </div>
 
-            <QrCode value="https://br.ivao.aero" size={76} renderAs="svg" />
+            <QrCode value="https://ir.ivao.aero" size={76} renderAs="svg" />
           </div>
         </div>
       </div>
@@ -175,7 +174,7 @@ const BoardingPassRightSide: FunctionComponent<BoardingPassProps> = ({
   return (
     <div className={bodyStyle.sideContent}>
       <div className={bodyStyle.passengerInfoSideBar}>
-        <div>nome/name</div>
+        <div>Name</div>
         <div>
           {user.lastName}, {user.firstName}
         </div>
@@ -192,7 +191,7 @@ const BoardingPassRightSide: FunctionComponent<BoardingPassProps> = ({
       </div>
       <div className={bodyStyle.dateInfoSidebar}>
         <div>
-          <div>Data/Date</div>
+          <div>Date</div>
           <div>{formatDate(eventStartDate)}</div>
         </div>
         <div>
@@ -204,11 +203,11 @@ const BoardingPassRightSide: FunctionComponent<BoardingPassProps> = ({
       </div>
       <div className={bodyStyle.seatInfo}>
         <div>
-          <div>Grupo/Group</div>
+          <div>Group</div>
           <div>G1</div>
         </div>
         <div>
-          <div>Assento/Seat</div>
+          <div>Seat</div>
           <div className="text-right">1A</div>
         </div>
       </div>
