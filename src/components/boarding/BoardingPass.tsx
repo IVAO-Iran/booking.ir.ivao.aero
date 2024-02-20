@@ -71,8 +71,8 @@ const BoardingPassHeader: FunctionComponent<BoardingPassProps> = ({
       className={headerStyle.header}
     >
       <div>
-        <span>{eventName}</span>
         <span>Boarding Pass</span>
+        <span></span>
       </div>
       <div>
         {actions}
