@@ -9,13 +9,13 @@ const enTranslations: { translations: Translations } = {
       see: 'See'
     },
     footer: {
-      copyrightMessage: '© 2024 International Virtual Aviation Organisation - IVAO Iran. All Rights Reserved. Kronos is made by IVAO Brazil',
+      copyrightMessage: '© 2025 International Virtual Aviation Organisation - IVAO Iran. All Rights Reserved. Kronos is made by IVAO Brazil',
       privacyPolicyName: 'Privacy Policy',
       termsOfUseName: 'Terms of Use',
     },
     beta: {
-      title: 'BETA SYSTEM',
-      message: '𝗞𝗥𝗢𝗡𝗢𝗦 is a recently launched system and is under constant development. We count on you to report any bugs you find 🐛.'
+      title: 'ANY PROBLEMS?',
+      message: 'If you have questions or have any problem with the system, feel free to contact us!'
     },
     cookies: {
       title: 'We use cookies to improve your experience',
